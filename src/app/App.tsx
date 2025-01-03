@@ -9,6 +9,7 @@ import { AboutPage } from "pages/AboutPage";
 import { MainPage } from "pages/MainPage";
 import 'app/styles/_index.scss'
 import { useTheme } from "./providers/ThemeProvider";
+import { routeConfig } from "./providers/router/ui/AppRouter";
 
 
 
@@ -23,8 +24,13 @@ export const App = () => {
             <Link to='/about'>AboutPage</Link>
             <Suspense fallback={<div>Loading...</div>} key={location.pathname}>
                 <Routes>
-                    <Route path='/' element={<MainPage />} />
-                    <Route path='/about' element={<AboutPage />} />
+                    {Object.values(routeConfig).map(({ element, path }) => (
+                        <Route
+                            key={path}
+                            path={path}
+                            element={element}
+                        />
+                    ))}
                 </Routes>
             </Suspense>
             <div>
