@@ -4,7 +4,6 @@ import { routeConfig } from "shared/config/routeConfig/routeConfig"
 
 const AppRoute = () => {
     const location = useLocation()
-    console.log(location)
     return (
         <Suspense fallback={<div>Loading...</div>} key={location.pathname}>
             <Routes>
