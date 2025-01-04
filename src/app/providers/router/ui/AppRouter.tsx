@@ -6,16 +6,21 @@ const AppRoute = () => {
     const location = useLocation()
     return (
         <Suspense fallback={<div>Loading...</div>} key={location.pathname}>
+
             <Routes>
                 {Object.values(routeConfig).map(({ element, path }) => (
                     <Route
                         key={path}
                         path={path}
-                        element={element}
+                        element={
+                            <div className='page-wrapper'>
+                                {element}
+                            </div>
+                        }
                     />
                 ))}
             </Routes>
-        </Suspense>
+        </Suspense >
     )
 }
 
