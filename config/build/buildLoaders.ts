@@ -2,7 +2,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import webpack from 'webpack'
 
 
-export function buildLoaders(isDev: Boolean): webpack.RuleSetRule[] {
+export function buildLoaders(isDev: boolean): webpack.RuleSetRule[] {
 
 
     const babelLoader = {
