@@ -2,5 +2,7 @@
     "Текстовий приклад": "Test example",
     "Переклад": "Translation",
     "Мова": "English",
-    "Сторінка не знайдена": "Page is not found"
+    "Сторінка не знайдена": "Page is not found",
+    "Виникла непередбачувана помилка": "Something went wrong!",
+    "Оновити сторінку": "Reload page"
 }
